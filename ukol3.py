@@ -51,12 +51,16 @@ def ulozto(subor,novysubor):
         studenti.sort(reverse=True)
         with open(novysubor,"w") as file:
             for body, meno in studenti:
-                file.write(f"{meno} so ziskom {body} bodov\n")
+                file.write(meno," so ziskom ",body," bodov\n")
     except FileNotFoundError:
         print("Súbor neexistuje!")
         return []
     
 su=input("Napíš meno vstupneho suboru (nazov_suboru.txt): ")
+print("1. Najlepšia pätica")
+print("2. Všetci študenti pod priemerom")
+print("2. Uloženie do externého txt súboru")
+print("4. Koniec")
 
 while True:
     vybermoznosti=int(input("Vyber si ktorú funkciu chceš vykonať: (1-4) "))
@@ -64,9 +68,9 @@ while True:
     if vybermoznosti == 1:
         print("Jupí vybral si si top 5 študentov!")
         jednicka = top5_studenti(su)
-        print("Die beste Studenten hier:")
+        print("Toto sú najlepší:")
         for i, (body, meno) in enumerate(jednicka, start=1):
-            print(f"{i}. {meno} - {body} bodov")
+            print(i,"." ,meno, "-", body, "bodov")
 
     elif vybermoznosti == 2:
         print("Jupí vybral si si studentov pod priemerom!")
@@ -84,11 +88,9 @@ while True:
         print("ulozene")
 
     elif vybermoznosti == 4:
-        print("caw")
+        print("koncim, caw, cc")
         break
 
-    elif vybermoznosti == 69 or vybermoznosti == 67 or vybermoznosti == 1338 or vybermoznosti == 420:
-        print("sigma")
-
     else:
+
         print("skus to znova")
