@@ -1,5 +1,5 @@
 import statistics
-def top5_studenti(subor):
+def vrchol(subor):
     try:
         studenti = []
         with open(subor, "r") as f:
@@ -67,7 +67,7 @@ while True:
 
     if vybermoznosti == 1:
         print("Jupí vybral si si top 5 študentov!")
-        jednicka = top5_studenti(su)
+        jednicka = vrchol(su)
         print("Toto sú najlepší:")
         for i, (body, meno) in enumerate(jednicka, start=1):
             print(i,"." ,meno, "-", body, "bodov")
@@ -92,5 +92,5 @@ while True:
         break
 
     else:
-
         print("skus to znova")
+#moznost dodat dalsie rozsirenie cez try, if a continue
