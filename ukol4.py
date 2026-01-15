@@ -125,7 +125,7 @@ def main():
     print()
 
     print("point_2d_1")
-    point_2d_1 = Point2D(14, 88)
+    point_2d_1 = Point2D(55, 88)
     point_2d_1.print_pos()
     print()
 
@@ -147,7 +147,7 @@ def main():
     print()
 
     print("polyline_3")
-    polyline_3 = PolyLine(point_1, point_2d_1, "gray", 1488, 88)
+    polyline_3 = PolyLine(point_1, point_2d_1, "gray", 1458, 88)
     print(round(polyline_3.length(), 4))
     polyline_3.print()
     print()
@@ -161,3 +161,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
